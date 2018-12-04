@@ -18,9 +18,10 @@ class Api::V1::NotesController < ApplicationController
     user_stock = UserStock.find_by(user_id: get_current_user.id, stock_id: params[:stock_id].to_i)
     @note = Note.create(title: params[:title], content: params[:content], article_url: params[:article_url], user_stock_id: user_stock.id)
 
-    NoteReminderJob.perform_later(@note, '3rd Dec 2018 17:18:20')
+    NoteReminderJob.perform_later(@note, '4th Dec 2018 18:09:15')
 
-    # set(wait_until: DateTime.parse('3rd Dec 2018 16:46:10')).perform_later(@note) 
+    # @date = DateTime.parse('4th Dec 2018 16:56:20')
+    # NoteReminderJob.perform_later(@note, @date) 
     
     # https://blog.codeship.com/how-to-use-rails-active-job/
 

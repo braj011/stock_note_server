@@ -65,9 +65,7 @@ Rails.application.configure do
   # #   location: '/usr/sbin/sendmail',
   # #   arguments: '-i'
   # # }
-  # config.action_mailer.perform_deliveries = true
-  # config.action_mailer.raise_delivery_errors = true
-  # config.action_mailer.default_options = {from: 'postmaster@sandboxb52a1e5cf8994003a598480c0a28f42b.mailgun.org'}
+
  
 
   config.action_mailer.delivery_method = :mailgun
@@ -77,18 +75,6 @@ Rails.application.configure do
   }
 
 
-
-  #  Part 2 of config. for google
-  # config.action_mailer.delivery_method = :smtp
-  # config.action_mailer.smtp_settings = {
-  # address:              'smtp.gmail.com',
-  # port:                  25,
-  # # port:                 587, - trying port 25 - potentirails ally less security issues?
-  # domain:               'example.com',   # this would typically be my domain... but perhaps I don't need to include this???
-  # user_name:            ENV['STOCK_NOTE_EMAIL'],
-  # password:             ENV['STOCK_NOTE_PW'],
-  # authentication:       'plain',
-  # enable_starttls_auto: true  }
 
   
 end
