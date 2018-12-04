@@ -22,15 +22,22 @@ class Api::V1::UserStocksController < ApplicationController
       render json: {error: 'You have already added this stock'}
     else 
       user_stock = UserStock.find_or_create_by(stock_id: stock.id, user_id: user.id)
+      # byebug
       render json: [user_stock], serializer: UserStockSerializer
     end 
   end
 
   def destroy 
-    @user_stock = UserStock.find(params[:id])
-    byebug
-    @user_stock.destroy
-    render {alert: "You have removed this stock from your portfolio."}
+    # @stock = Stock.find(params[:id])
+    @user = get_current_user
+    @user_stock_found = UserStock.find_by(stock_id: params[:id], user_id: @user.id)
+    if @user_stock_found.notes  
+      @user_stock_found.notes.destroy_all
+    end 
+    if @user_stock_found
+      @user_stock_found.destroy
+     render json: {status: 200 }
+    end 
   end 
 
 end
