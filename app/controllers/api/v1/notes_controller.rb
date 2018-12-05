@@ -18,7 +18,7 @@ class Api::V1::NotesController < ApplicationController
     user_stock = UserStock.find_by(user_id: get_current_user.id, stock_id: params[:stock_id].to_i)
     @note = Note.create(title: params[:title], content: params[:content], article_url: params[:article_url], user_stock_id: user_stock.id)
 
-    NoteReminderJob.perform_later(@note, '4th Dec 2018 18:09:15')
+    NoteReminderJob.perform_later(@note, '5th Dec 2018 11:18:15')  # this works - 5th Dec
 
     # @date = DateTime.parse('4th Dec 2018 16:56:20')
     # NoteReminderJob.perform_later(@note, @date) 
