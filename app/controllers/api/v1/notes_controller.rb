@@ -18,15 +18,15 @@ class Api::V1::NotesController < ApplicationController
     user_stock = UserStock.find_by(user_id: get_current_user.id, stock_id: params[:stock_id].to_i)
     @note = Note.create(title: params[:title], content: params[:content], article_url: params[:article_url], 
             notif_date: params[:notif_date], user_stock_id: user_stock.id)
-
-    NoteReminderJob.perform_later(@note, '5th Dec 2018 11:25:15')  # this works - 5th Dec
+    formatted_Date = @note.notif_date.to_datetime 
+    NoteReminderJob.perform_later(@note, params[:notif_date])  # this works - 5th Dec 11 am
+    # '5th Dec 2018 11:25:15'
+    render json: { title: @note.title, content: @note.content, article_url: @note.article_url, notif_date: @note.notif_date,  user_stock_id: @note.user_stock_id, updated_at: @note.updated_at }
 
     # @date = DateTime.parse('4th Dec 2018 16:56:20')
     # NoteReminderJob.perform_later(@note, @date) 
-    
     # https://blog.codeship.com/how-to-use-rails-active-job/
 
-    render json: { title: @note.title, content: @note.content, article_url: @note.article_url, notif_date: @note.notif_date,  user_stock_id: @note.user_stock_id, updated_at: @note.updated_at }
     # if note.valid?
     #   note.save
     # else 
