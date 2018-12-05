@@ -62,3 +62,5 @@ gem 'mailgun-ruby'
 
 gem 'sidekiq'
 
+gem 'sidekiq-failures', '~> 1.0'
+

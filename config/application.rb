@@ -34,7 +34,7 @@ module InvServer
 
 
     # I did the below... 03/12/18 - 16:15
-    # config.active_job.queue_adapter = :sidekiq
+    config.active_job.queue_adapter = :sidekiq
 
 
   end
