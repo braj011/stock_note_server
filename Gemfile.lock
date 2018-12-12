@@ -76,7 +76,7 @@ GEM
       multi_xml (>= 0.5.2)
     i18n (1.1.1)
       concurrent-ruby (~> 1.0)
-    json (1.8.3)
+    json (1.8.6)
     jsonapi-renderer (0.2.0)
     jwt (2.1.0)
     listen (3.1.5)
@@ -208,7 +208,7 @@ DEPENDENCIES
   tzinfo-data
 
 RUBY VERSION
-   ruby 2.3.3p222
+   ruby 2.5.3p105
 
 BUNDLED WITH
    1.16.6
