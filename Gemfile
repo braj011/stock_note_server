@@ -45,6 +45,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'httparty', '~> 0.13.7' 
 end
 
 
@@ -61,7 +62,8 @@ gem "jwt", "~> 2.1"
 
 gem 'news-api' 
 
-gem 'httparty', '~> 0.13.7'
+# gem 'httparty', '~> 0.13.7' 
+# moving this to development for testing 
 
 gem 'dotenv-rails'
 
