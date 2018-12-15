@@ -15,6 +15,7 @@ Rails.application.routes.draw do
       post '/get_user_notes', to: 'notes#get_user_notes'
 
       resources :news_apis
+      post '/search_news', to: 'news_apis#search_news'
     
     end 
   end 
