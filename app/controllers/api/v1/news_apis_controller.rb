@@ -26,6 +26,14 @@ class Api::V1::NewsApisController < ApplicationController
     render json: profile_news
  end 
 
+ def search_news 
+  base_search_news_url = "https://newsapi.org/v2/everything?q="
+
+ end 
+
+
+
+
   
 end
 
