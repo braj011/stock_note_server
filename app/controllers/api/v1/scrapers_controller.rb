@@ -2,6 +2,9 @@
 # require 'nokogiri'
 # require 'pry'
 
+
+#  ************************ IN THE GIT IGNORE FILE ********************
+
 # class Scraper
 
 #   attr_accessor :parse_page 

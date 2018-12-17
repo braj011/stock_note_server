@@ -23,3 +23,5 @@
 /config/master.key
 
 .env
+
+/app/controllers/aoi/v1/scrapers_controller.rb
