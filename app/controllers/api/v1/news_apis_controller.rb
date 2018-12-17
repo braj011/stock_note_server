@@ -1,7 +1,5 @@
 class Api::V1::NewsApisController < ApplicationController
 
-  include HTTParty
-
   def index
       def business_headlines
         base_business_news_url = "https://newsapi.org/v2/everything?q=%22business%22,%20%22stocks%22&pageSize=100&sortBy=publishedAt&sources=bbc-news,%20cnbc,%20bloomberg,%20cnbc,%20crypto-coins-news,%20business-insider,%20financial-post,%20%20financial-times,%20fortune,%20techcrunch,%20the-wall-street-journal"
