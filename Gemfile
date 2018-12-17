@@ -48,6 +48,7 @@ group :development do
   gem 'httparty', '~> 0.13.7' 
 end
 
+gem 'httparty', '~> 0.13.7' 
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
