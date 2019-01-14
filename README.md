@@ -10,7 +10,7 @@
 - send themselves the notes by email now or at ata future date of their choosing.
 
 
-Backend is built using RUby on Rails (and is hosted on Heroku).
+Backend is built using Ruby on Rails (and is hosted on Heroku).
 APIs for news data and stock data comes from newsapi.org and iextrading respectively. 
 Email notifcations done through ActionMailer and ActiveJobs using SideKiq and Retis.
 
@@ -18,7 +18,7 @@ Frontend repo:  https://github.com/braj011/investment_research_client
 Built using React framework alongside Redux to manage state.
 CSS is a mix of custom and Semantic UI.
 
-# BELOW SECTION - needs editing still 
+# BELOW SECTION - further updates to come (see Frontend repo for screenshots)
  
 ### Home page
 ![Alt text](images/homePage.png)
