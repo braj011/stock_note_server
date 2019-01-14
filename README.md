@@ -1,24 +1,44 @@
-# README
+# stockNote Backend (investments-research-platform)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## stockNote is an amateur stocks and shares research platform where a user can:
 
-Things you may want to cover:
+- create an authenticated user profile
+- add stocks to their watchlist
+- get news on their selected stocks
+- see stock price data for the last year (US stocks only) + a link out to Google Finance for more complete data. 
+- add notes / comments to their stocks so that a user can keep track of their thoughts and analysis
+- send themselves the notes by email now or at ata future date of their choosing.
 
-* Ruby version
 
-* System dependencies
+Backend is built using RUby on Rails (and is hosted on Heroku).
+APIs for news data and stock data comes from newsapi.org and iextrading respectively. 
+Email notifcations done through ActionMailer and ActiveJobs using SideKiq and Retis.
 
-* Configuration
+Frontend repo:  https://github.com/braj011/investment_research_client
+Built using React framework alongside Redux to manage state.
+CSS is a mix of custom and Semantic UI.
 
-* Database creation
+# BELOW SECTION - needs editing still 
+ 
+### Home page
+![Alt text](images/homePage.png)
 
-* Database initialization
+### Profile page - main
+![Alt text](images/mainProfile.png) 
+On the left-hand side, you can add new stocks / delete existing ones in your portfolio.
 
-* How to run the test suite
+### Stock specific page - adding a new note
+![Alt text](images/addingNote.png)
+On the right hand side, you can add new notes, copy article Urls from the clipboard and paste them into your notes to reference any articles.
+You can also choose to send yourself the note by email (more details on Backend repo).
+Notes are ordered by most recent first.
 
-* Services (job queues, cache servers, search engines, etc.)
+### Stock specific page - line chart
+![Alt text](images/viewChart.png)
+The stock data chart comes from the IEX trading data API (for US stocks only). This uses a stock ticker and is why the user must enter a stock ticker when adding a new stock. 
+The line chart is created using the React Chart js library. 
 
-* Deployment instructions
+----------------------------------------------------
+The app is live at http://stock-note.surge.sh/ with the backend hosted on Heroku. Upon arrival, the server may take a few seconds to post news onto the homepage. At this point, one can create an account and add stocks.
 
-* ...
+NOTE: The deployment to production has a few bugs and I am working through these.
